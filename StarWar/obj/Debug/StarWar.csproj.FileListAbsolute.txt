@@ -1,0 +1,11 @@
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\square.png
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\star10.png
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\star100.png
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\star25.png
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\star50.png
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\StarWar.exe.config
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\StarWar.exe
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\StarWar.pdb
+D:\Dropbox\С#\С#-2\StarWar\StarWar\obj\Debug\StarWar.csprojAssemblyReference.cache
+D:\Dropbox\С#\С#-2\StarWar\StarWar\obj\Debug\StarWar.exe
+D:\Dropbox\С#\С#-2\StarWar\StarWar\obj\Debug\StarWar.pdb
