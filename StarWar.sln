@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWar", "StarWar\StarWar.csproj", "{A47EC1CD-F770-4439-ACFB-B79A930D27D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZ", "DZ\DZ.csproj", "{44008888-20C5-4727-A206-A75699271972}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A19A5A1-079E-4B28-BD9B-056A3177F632} = {4A19A5A1-079E-4B28-BD9B-056A3177F632}
+		{A47EC1CD-F770-4439-ACFB-B79A930D27D3} = {A47EC1CD-F770-4439-ACFB-B79A930D27D3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZ2", "DZ2\DZ2.csproj", "{4A19A5A1-079E-4B28-BD9B-056A3177F632}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,14 @@ Global
 		{A47EC1CD-F770-4439-ACFB-B79A930D27D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A47EC1CD-F770-4439-ACFB-B79A930D27D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A47EC1CD-F770-4439-ACFB-B79A930D27D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44008888-20C5-4727-A206-A75699271972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44008888-20C5-4727-A206-A75699271972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44008888-20C5-4727-A206-A75699271972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44008888-20C5-4727-A206-A75699271972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A19A5A1-079E-4B28-BD9B-056A3177F632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A19A5A1-079E-4B28-BD9B-056A3177F632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A19A5A1-079E-4B28-BD9B-056A3177F632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A19A5A1-079E-4B28-BD9B-056A3177F632}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
