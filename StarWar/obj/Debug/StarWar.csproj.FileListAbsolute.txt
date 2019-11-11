@@ -3,7 +3,6 @@ D:\Dropbox\С#\С#-2\StarWar\StarWar\obj\Debug\Interop.WMPLib.dll
 D:\Dropbox\С#\С#-2\StarWar\StarWar\obj\Debug\StarWar.csproj.ResolveComReference.cache
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\aster100.png
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\back900.jpg
-D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\square.png
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\star10.png
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\star100.png
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\star25.png
@@ -18,3 +17,5 @@ D:\Dropbox\С#\С#-2\StarWar\StarWar\obj\Debug\StarWar.pdb
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-0-10.1.mp3
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-10.1-171.2.mp3
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Sounds\Список воспроизведения1.wpl
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\StarShip.png
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\2_72-64x64.png

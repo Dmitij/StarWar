@@ -5,13 +5,13 @@ using System.Drawing;
 
 namespace StarWar
 {
-    abstract class Pictures : ICollision
+    abstract class Objects : ICollision
     {
         protected Point pos;
         protected Point dir;
         protected Size size;
-
-        public Pictures(Point pos, Point dir, Size size)
+        
+        public Objects(Point pos, Point dir, Size size)
         {
             this.pos = pos;
             this.dir = dir;
@@ -26,104 +26,16 @@ namespace StarWar
         {
             return (collision.Rect.IntersectsWith(this.Rect));
         }
+        public delegate void Message();
+        public delegate void Log();
+    }       
 
-    }
-
-    class Bullet : Pictures
-    {
-        int speed;
-        public Bullet(Point pos, Point dir, Size size) : base(pos, dir, size)
-        {
-            speed = dir.X;
-        }
-
-        public override void Update()
-        {
-            pos.X = pos.X + dir.X;
-            pos.Y = pos.Y + dir.Y;
-            if (pos.X < 0) dir.X = -dir.X;
-            if (pos.X > Game.Width) dir.X = -dir.X;
-            if (pos.Y < 0) dir.Y = -dir.Y;
-            if (pos.Y > Game.Height) dir.Y = -dir.Y;
-        }
-        //{            
-
-        //    pos.X = pos.X + dir.X;
-        //    if (pos.X < Game.Width)
-        //    {
-        //        pos.X = pos.X + speed;
-        //        //pos.Y = rand.Next(Game.Height);
-        //    }
-
-        //}
-        public override void Draw()
-        {
-            Game.buffer.Graphics.DrawEllipse(Pens.White, pos.X, pos.Y, size.Width, size.Height);
-        }
-    }
-
-    //class Star: BaseObject
-    //{
-
-    //    public static Image Image { get; set; }
-
-    //    //public Star():base(new Point(0,0),new Point(0,0),new Size(0,0))
-    //    //{
-
-    //    //}
-
-    //    public Star(Point pos, Point dir, Size size) : base(pos, dir, size)
-    //    {
-
-    //    }
-
-    //    public override void Update()
-    //    {
-    //        var rand = new Random();
-    //        pos.X = pos.X - dir.X;
-    //        if (pos.X < 0)
-    //        {
-    //            pos.X = Game.Width;
-    //            pos.Y = rand.Next(Game.Height);
-    //        }
-    //    }
-
-    //    public override void Draw()
-    //    {           
-    //        Game.buffer.Graphics.DrawImage(Image, pos);
-    //    }
-
-    //}
-
-    //abstract class Pictures: ICollision
-    //{
-    //    protected Point pos;
-    //    protected Point dir;        
-    //    public static Image Image { get; set; }
-         
-    //    public Pictures(Point pos, Point dir) 
-    //    {
-    //        this.pos = pos;
-    //        this.dir = dir;            
-    //    }
-    //    public abstract void Update();
-
-    //    public abstract void Draw();
-
-
-    //    public Rectangle Rect =>  new Rectangle(pos, new Size(100,100));
-    //    public bool Collision(ICollision collision)
-    //    {
-    //        return (collision.Rect.IntersectsWith(this.Rect));
-    //    }
-    //}
-
-    class Stars100 : Pictures
-    {
+    class Stars100 : Objects
+    {          
         public static Image Image { get; set; }
         public Stars100(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
-
+           
         }
         public override void Update()
         {
@@ -140,9 +52,8 @@ namespace StarWar
             Game.buffer.Graphics.DrawImage(Image, pos);
         }
     }
-
-    class Stars50 : Pictures
-    {
+    class Stars50 : Objects
+    {        
         public static Image Image { get; set; }
         public Stars50(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
@@ -163,9 +74,8 @@ namespace StarWar
             Game.buffer.Graphics.DrawImage(Image, pos);
         }
     }
-
-    class Stars25 : Pictures
-    {
+    class Stars25 : Objects
+    {        
         public static Image Image { get; set; }
         public Stars25(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
@@ -186,7 +96,7 @@ namespace StarWar
             Game.buffer.Graphics.DrawImage(Image, pos);
         }
     }
-    class Stars10 : Pictures
+    class Stars10 : Objects
     {
         public static Image Image { get; set; }
         public Stars10(Point pos, Point dir, Size size) : base(pos, dir, size)
@@ -209,12 +119,56 @@ namespace StarWar
         }
     }
 
-    class Asteroid : Pictures
+    
+    interface ICollision
     {
-        public static Image Image { get; set; }
-        public Asteroid(Point pos, Point dir, Size size) : base(pos, dir, size)
-        {
+        bool Collision(ICollision collision);
+        Rectangle Rect { get; }
+    }
 
+    class Bullets : Objects
+    {
+        public int Energy { get; set; }
+        public int Speed { get; set; }
+        public Bullets(Point pos, Point dir, Size size) : base(pos, dir, size)
+        {
+            Energy = 49;
+            Speed = dir.X;
+            this.pos = pos;
+        }
+                
+
+        public override void Update()
+        {
+            pos.X = pos.X + dir.X;
+            pos.Y = pos.Y + dir.Y;
+            if ((pos.X > Game.Width) && (pos.X < 0) && (pos.Y < 0) && (pos.Y > Game.Height))
+            {
+                pos.X = -500;
+                pos.Y = -500;
+            }
+        }
+        
+        public override void Draw()
+        {
+            Game.buffer.Graphics.DrawEllipse(Pens.White, pos.X, pos.Y, size.Width, size.Height);
+        }
+        public void Die()
+        {
+        }
+    }
+       
+    
+    class Asteroids : Objects
+    {
+        public int Energy { get; set; }
+        public int Speed { get; set; }
+
+        public static Image Image { get; set; }
+        public Asteroids(Point pos, Point dir, Size size) : base(pos, dir, size)
+        {
+            Energy = 100;
+            Speed = -dir.X;
         }
         public override void Update()
         {
@@ -224,7 +178,7 @@ namespace StarWar
             {
                 pos.X = Game.Width;
                 pos.Y = rand.Next(Game.Height);
-                
+
             }
             //Asteroid.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);            
         }
@@ -232,13 +186,85 @@ namespace StarWar
         {
             Game.buffer.Graphics.DrawImage(Image, pos);
         }
-       
+        public void Die()
+        {
+            AsterDie?.Invoke();
+        }
+        public static event Message AsterDie;
     }
 
-    interface ICollision
+    class Lives : Objects
     {
-        bool Collision(ICollision collision);
-        Rectangle Rect { get; }
+        public int Energy { get; set; }
+        public int Speed { get; set; }
+
+        public static Image Image { get; set; }
+        public Lives(Point pos, Point dir, Size size) : base(pos, dir, size)
+        {
+            Energy = 100;
+            Speed = -dir.X;
+        }
+        public override void Update()
+        {
+            var rand = new Random();
+            pos.X = pos.X - dir.X;
+            if (pos.X < -100)
+            {
+                pos.X = Game.Width;
+                pos.Y = rand.Next(Game.Height);
+
+            }
+            //Asteroid.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);            
+        }
+        public override void Draw()
+        {
+            Game.buffer.Graphics.DrawImage(Image, pos);
+        }
+        public void Die()
+        {
+            AsterDie?.Invoke();
+        }
+        public static event Message AsterDie;
     }
 
+    class Ship : Objects
+    {
+        public static Image Image { get; set; }
+        public int Energy { get; set; }
+        public int Speed { get; set; }
+
+        //public void EnergyLow(int n)
+        //{
+        //    Energy -= n;            
+        //    Speed = dir.Y;
+        //}
+        public Ship(Point pos, Point dir, Size size) : base(pos, dir, size)
+        {
+            Energy = 100;
+            Speed = dir.Y;
+        }
+        public override void Draw()
+        {
+            Game.buffer.Graphics.DrawImage(Image, pos);
+        }
+        public override void Update()
+        {
+          
+        }
+        public void Up()
+        {
+            if (pos.Y > 0) 
+                pos.Y = pos.Y - dir.Y;
+        }
+        public void Down()
+        {
+            if (pos.Y < Game.Height-50) 
+                pos.Y = pos.Y + dir.Y;
+        }
+        public void Die()
+        {
+            ShipDie.Invoke();
+        }
+        public static event Message ShipDie;
+    }
 }

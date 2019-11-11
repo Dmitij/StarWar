@@ -44,13 +44,12 @@ namespace StarWar
 
             form.Show();
             Game.Init(form);
+
+            //WMP.URL = "Sounds\\Список воспроизведения1.wpl";
+            WMPLib.WindowsMediaPlayer WMP2 = new WMPLib.WindowsMediaPlayer();
+            WMP.settings.setMode("loop", true);
+            WMP.URL = "Sounds\\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-10.1-171.2.mp3";
             
-            WMP.URL = "Sounds\\Список воспроизведения1.wpl";
-            //WMPLib.WindowsMediaPlayer WMP2 = new WMPLib.WindowsMediaPlayer();
-            //WMP.settings.setMode("loop", true);
-            
-            //WMP.URL = "Sounds\\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-10.1-171.2.mp3";
-            //WMP.m += new EventHandler(Media_Ended);
             Application.Run(form);
 
             

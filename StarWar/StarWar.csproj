@@ -71,13 +71,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\2_72-64x64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\aster100.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\back900.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\square.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\star10.png">
@@ -92,6 +92,9 @@
     <Content Include="Images\star50.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\StarShip.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-0-10.1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -101,7 +104,7 @@
     <Content Include="Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sounds\Sound_00298.wav" />
+    <Content Include="Sounds\boom.wav" />
     <Content Include="Sounds\Sound_06777.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
