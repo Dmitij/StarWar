@@ -1,0 +1,29 @@
+D:\Dropbox\С#\С#-2\StarWar\DZ\obj\Debug\DZ.csprojAssemblyReference.cache
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\aster100.png
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\back900.jpg
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\star10.png
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\star100.png
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\star25.png
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\star50.png
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать.mp3
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Sounds\Sound_06777.mp3
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ.exe.config
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ2.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\StarWar.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ2.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ2.exe.config
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\StarWar.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\StarWar.exe.config
+D:\Dropbox\С#\С#-2\StarWar\DZ\obj\Debug\DZ.csproj.CopyComplete
+D:\Dropbox\С#\С#-2\StarWar\DZ\obj\Debug\DZ.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ\obj\Debug\DZ.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-0-10.1.mp3
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-10.1-171.2.mp3
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Sounds\Список воспроизведения1.wpl
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\StarShip.png
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\2_72-64x64.png
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ3.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ3.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ3.exe.config
