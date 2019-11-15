@@ -1,0 +1,6 @@
+D:\Dropbox\С#\С#-2\StarWar\DZ3\bin\Debug\DZ3.exe.config
+D:\Dropbox\С#\С#-2\StarWar\DZ3\bin\Debug\DZ3.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ3\bin\Debug\DZ3.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ3\obj\Debug\DZ3.csprojAssemblyReference.cache
+D:\Dropbox\С#\С#-2\StarWar\DZ3\obj\Debug\DZ3.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ3\obj\Debug\DZ3.pdb
