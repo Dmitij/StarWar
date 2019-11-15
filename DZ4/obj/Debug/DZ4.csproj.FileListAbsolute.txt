@@ -1,0 +1,6 @@
+D:\Dropbox\С#\С#-2\StarWar\DZ4\bin\Debug\DZ4.exe.config
+D:\Dropbox\С#\С#-2\StarWar\DZ4\bin\Debug\DZ4.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ4\bin\Debug\DZ4.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ4\obj\Debug\DZ4.csprojAssemblyReference.cache
+D:\Dropbox\С#\С#-2\StarWar\DZ4\obj\Debug\DZ4.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ4\obj\Debug\DZ4.pdb
