@@ -59,6 +59,10 @@
       <Project>{ba35d13c-7112-4cce-8d06-1360cbb9859a}</Project>
       <Name>DZ3</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DZ4\DZ4.csproj">
+      <Project>{ebf95785-82f1-483b-9cd2-f10211ba6a90}</Project>
+      <Name>DZ4</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StarWar\StarWar.csproj">
       <Project>{a47ec1cd-f770-4439-acfb-b79a930d27d3}</Project>
       <Name>StarWar</Name>

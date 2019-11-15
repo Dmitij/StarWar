@@ -20,35 +20,39 @@ namespace StarWar
             Console.Clear();
             Form form = new Form();
             Form formMenu = new Form();
-            Button btnAdd = new Button();
+            Button btnNew = new Button();
 
             form.Width = 800;
             form.Height = 600;
             if ((form.Width > 1000) || (form.Height > 1000) || (form.Width < 0) || (form.Height < 0))
                 throw new ArgumentOutOfRangeException();
 
-            btnAdd.BackColor = Color.Gray;
-            btnAdd.Text = "Играть";
-            btnAdd.Click += (sender, args) => { formMenu.Close(); };
+            btnNew.BackColor = Color.Gray;
+            btnNew.Text = "Играть";
+            btnNew.Click += (sender, args) => { formMenu.Close(); };
 
-            formMenu.Width = 800;
-            formMenu.Height = 600;            
-            formMenu.Controls.Add(btnAdd);
-            formMenu.Show();
 
             WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
             WMP.settings.setMode("loop", false);
             WMP.URL = "Sounds\\Sound_06777.mp3";
 
-            Application.Run(formMenu);
+            formMenu.Width = 800;
+            formMenu.Height = 600;            
+            formMenu.Controls.Add(btnNew);
+            formMenu.ShowDialog();
 
-            form.Show();
-            Game.Init(form);
+
 
             //WMP.URL = "Sounds\\Список воспроизведения1.wpl";
             WMPLib.WindowsMediaPlayer WMP2 = new WMPLib.WindowsMediaPlayer();
             WMP.settings.setMode("loop", true);
             WMP.URL = "Sounds\\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-10.1-171.2.mp3";
+
+
+            //form.ShowDialog();
+            Game.Init(form);
+
+            
             
             Application.Run(form);
 

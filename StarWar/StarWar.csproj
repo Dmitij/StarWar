@@ -95,6 +95,12 @@
     <Content Include="Images\StarShip.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Sounds\game over.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\laser-delay_zjicqo4_.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать-0-10.1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -104,7 +110,7 @@
     <Content Include="Sounds\Power Blade – Уровень 5_ Музыка из игры Dendy скачать.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sounds\boom.wav" />
+    <Content Include="Sounds\punchy-space-deploy_zk0v2rv_.mp3" />
     <Content Include="Sounds\Sound_06777.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -27,3 +27,8 @@ D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Images\2_72-64x64.png
 D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ3.exe
 D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ3.pdb
 D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ3.exe.config
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Sounds\game over.mp3
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\Sounds\laser-delay_zjicqo4_.mp3
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ4.exe
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ4.pdb
+D:\Dropbox\С#\С#-2\StarWar\DZ\bin\Debug\DZ4.exe.config

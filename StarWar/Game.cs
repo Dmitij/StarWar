@@ -30,7 +30,9 @@ namespace StarWar
         static Lives[] lives;
         static Ship ship;
         static int counter;
-        
+        //static int keydowncount;
+        static WMPLib.WindowsMediaPlayer WMP;
+        static Button btnEnd = new Button();
 
 
         static public void Init(Form form)
@@ -42,8 +44,8 @@ namespace StarWar
             context = BufferedGraphicsManager.Current;
             g = form.CreateGraphics();// Создаём объект - поверхность рисования и связываем его с формой
                                       // Запоминаем размеры формы
-            Width = form.Width;
-            Height = form.Height;
+            Width = 800-16;// form.Width;
+            Height = 600-38;// form.Height;
             // Связываем буфер в памяти с графическим объектом.
             // для того, чтобы рисовать в буфере
             buffer = context.Allocate(g, new Rectangle(0, 0, Width, Height));
@@ -53,38 +55,67 @@ namespace StarWar
             timer.Tick += Timer_Tick;
             timer.Start();
 
+            
+            form.Controls.Add(btnEnd);
+            btnEnd.Visible = false;
+
             form.KeyDown += Form_KeyDown;
             Ship.ShipDie += Finish;
-            Asteroids.AsterDie += AsterMessage;
+            //
+            Asteroids.AsterDie += AsterDie;
         }
 
-        private static void AsterMessage()
+        private static void AsterDie()
         {
-            Console.WriteLine("Астероид сбит " + counter);
+            //WMP = new WMPLib.WindowsMediaPlayer();
+            //WMP.URL = "Sounds\\punchy-space-deploy_zk0v2rv_.mp3";
+            //System.Media.SystemSounds.Asterisk.Play();
             counter++;
+            Console.WriteLine("Астероид сбит " + counter);
+            
         }
 
         public static void Finish()
         {
+            //btnEnd.Visible = true;
             buffer.Graphics.DrawString("Energy:" + ship.Energy, SystemFonts.DefaultFont, Brushes.White, 0, 0);
             timer.Stop();
-            buffer.Graphics.DrawString("The End", new Font(FontFamily.GenericSansSerif, 60, FontStyle.Underline), Brushes.White, 200, 100);
+            buffer.Graphics.DrawString("Game over", new Font(FontFamily.GenericSansSerif, 60, FontStyle.Underline), Brushes.White, 200, 100);
             buffer.Render();
             Console.WriteLine("Карабль уничтожен ");
-           
+            WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = "Sounds\\game over.mp3";
+            
+            
+            
+            // timer = new Timer() { Interval = 5000, Enabled = true };
+            // Environment.Exit(0);
+            // StarWar.Program.Main();
+            btnEnd.Visible = true;
+
         }
         private static void Form_KeyDown(object sender, KeyEventArgs e)
-        {
+        {            
+            //keydowncount++;
+            //if (keydowncount > 3)
+            //{
+            //    keydowncount = 0;         
+
+
             if (e.KeyCode == Keys.ControlKey)
             {
+                //WMP = new WMPLib.WindowsMediaPlayer();
+                //WMP.URL = "Sounds\\laser-delay_zjicqo4_.mp3";
+
                 bulls.Add(new Bullets(new Point(ship.Rect.X + Ship.Image.Width, ship.Rect.Y + Ship.Image.Height / 2), new Point(10, 0), new Size(4, 1)));
                 Console.WriteLine(bulls.Count);
             }
-            if (e.KeyCode == Keys.Up) 
+            
+            //}
+            if (e.KeyCode == Keys.Up)
                 ship.Up();
-            if (e.KeyCode == Keys.Down) 
+            if (e.KeyCode == Keys.Down)
                 ship.Down();
-
         }
 
         static public void Load()
@@ -119,7 +150,7 @@ namespace StarWar
 
             Ship.Image = Image.FromFile("Images\\StarShip.png");
             ship = new Ship(new Point(0, Game.Height / 2), new Point(0, 10), new Size(Ship.Image.Width, Ship.Image.Height));
-            bulls = new List<Bullets>() { new Bullets(new Point(-500, 0), new Point(0, 0), new Size(0, 0)) };
+            bulls = new List<Bullets>();// { new Bullets(new Point(-500, 0), new Point(0, 0), new Size(0, 0)) };
             
         }
 
@@ -185,8 +216,9 @@ namespace StarWar
                 {
                     if (asters[i].Collision(bulls[j]))
                     {
-                        //Console.WriteLine("Попадание в астеройд");
-                        System.Media.SystemSounds.Beep.Play();
+                        Console.WriteLine("Попадание в астеройд");
+                        //WMP = new WMPLib.WindowsMediaPlayer();
+                        //WMP.URL = "Sounds\\game over.mp3";
 
                         //if (asters[i].Speed >= bulls[j].Speed)
                         //    throw new ArgumentOutOfRangeException("Скорость астеройда больше чем скорость пули");
@@ -206,7 +238,7 @@ namespace StarWar
 
                 if (asters[i].Collision(ship))
                 {
-                    //Console.WriteLine("Столкновение с астеройдом");
+                    Console.WriteLine("Столкновение с астеройдом");
                     System.Media.SystemSounds.Asterisk.Play();
 
                     int e = asters[i].Energy;

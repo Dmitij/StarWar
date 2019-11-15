@@ -15,7 +15,7 @@ namespace DZ
             Console.WriteLine("1 - Игра StarWar");
             Console.WriteLine("2 - Домашнее задание 2");
             Console.WriteLine("3 - Домашнее задание 3. Добавить в пример Lesson3 обобщенный делегат");
-
+            Console.WriteLine("4 - Домашнее задание 4");
 
             Console.WriteLine("AnyKey - Exit");
             ConsoleKeyInfo key = Console.ReadKey();
@@ -29,6 +29,9 @@ namespace DZ
                     break;
                 case ConsoleKey.D3:
                     DZ3.Program.Main();
+                    break;
+                case ConsoleKey.D4:
+                    DZ4.Program.Main();
                     break;
 
                 case ConsoleKey.D0:

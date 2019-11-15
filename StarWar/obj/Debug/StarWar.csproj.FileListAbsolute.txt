@@ -19,3 +19,5 @@ D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Sounds\Power Blade – Урове
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Sounds\Список воспроизведения1.wpl
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\StarShip.png
 D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Images\2_72-64x64.png
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Sounds\game over.mp3
+D:\Dropbox\С#\С#-2\StarWar\StarWar\bin\Debug\Sounds\laser-delay_zjicqo4_.mp3
